@@ -11,11 +11,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
+//add import.java.util list
 
+// Need to use separate class
 
 public class Testcase101 {
 
 	public static void main(String[] args) throws InterruptedException, AWTException {
+
+  // Can use try catch block
+
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Johny\\Downloads\\geckodriver-v0.33.0-win64\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://interview.supporthive.com/staff/");
@@ -24,6 +29,8 @@ public class Testcase101 {
 		driver.findElement(By.id("id_username")).sendKeys("Agent");
 		driver.findElement(By.id("id_password")).sendKeys("Agent@123");
 		driver.findElement(By.id("btn-submit")).click();
+// can create a separate method for all .
+
 		WebElement tickets = driver.findElement(By.id("ember29"));
 		Actions action = new Actions(driver);
 		action.moveToElement(tickets).build().perform();
@@ -92,10 +99,20 @@ Thread.sleep(9000);
 driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/header[1]/div[2]/nav[1]/div[7]/div[1]/div[1]")).click();
 driver.findElement(By.linkText("Logout")).click();
 
+
+// Close curly braces
+
+//create separate file for this below class
+
 public class PagesforAutomationAssignment {
+
+// Can use try catch block
 
     public static void main(String[] args) {
         ChromeDriver driver = new ChromeDriver();
+       
+ // change WebDriver driver initialize
+
         driver.get("https://www.happyfox.com");
 
         LoginPage loginPage = new LoginPage(driver);
